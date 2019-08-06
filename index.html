@@ -262,5 +262,23 @@
             </p>
         </section>
     </div>
+    <script type="text/javascript">
+        (function () {
+            document.addEventListener('click', function(e) {
+                e = e || window.event;
+                let target = e.target || e.srcElement;
+
+                if (target.tagName === 'A') {
+                    target.classList.add('visited');
+                    let navigationLinks = document.querySelectorAll('a');
+                    navigationLinks.forEach(function (item, key) {
+                        if (item.hash !== target.hash) {
+                            item.classList.remove('visited');
+                        }
+                    });
+                }
+            }, false);
+        })();
+    </script>
 </body>
 </html>
