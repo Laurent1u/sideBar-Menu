@@ -100,6 +100,7 @@ section {
     padding: 100px;
     box-sizing: border-box;
     transition: 0.5s;
+    text-align: justify;
 }
 
 input[type="checkbox"]:checked ~ section {
@@ -144,6 +145,11 @@ section h2 {
 
     input[type="checkbox"]:checked ~ .icon {
         background: #000;
-        
+
     }
+}
+
+.visited {
+    transform: translateX(10px);
+    color: #ff0;
 }
